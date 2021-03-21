@@ -9,27 +9,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.br.cineomega.model.Ingresso;
-import com.br.cineomega.repository.IngressoRepository;
+import com.br.cineomega.model.Cliente;
+import com.br.cineomega.repository.ClienteRepository;
 
 @RestController
-@RequestMapping("/sessao")
-public class SessaoController {
+@RequestMapping("/cliente")
+public class ClienteController {
 
 	@Autowired
-	private IngressoRepository repository;
+	private ClienteRepository clienteRepository;
 	
-	@PostMapping("/comprar")
-	private Ingresso compraIngresso(@RequestBody Ingresso sessao) {
-		return repository.save(sessao);
+	@PostMapping("/adicionar")
+	public Cliente adicionarCliente(@RequestBody Cliente cliente) {
+		return clienteRepository.save(cliente);
 	}
 	
-	
-	@GetMapping("/lugares")
-	private List<Ingresso> lugares_Da_Sessao() {
-		return repository.findAll();
+	@GetMapping("/listar")
+	public List<Cliente> listarCliente() {
+		return clienteRepository.findAll();
 	}
-	
 	
 	
 }

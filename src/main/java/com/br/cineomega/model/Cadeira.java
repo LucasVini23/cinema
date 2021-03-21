@@ -18,10 +18,8 @@ public class Cadeira {
 	private Long id;
 	private String numeracao;
 	private Boolean disponivel;
-//	private Cliente cliente;
 	
 	public Cadeira(String numeracao, Boolean disponivel) {
-		super();
 		this.numeracao = numeracao;
 		this.disponivel = disponivel;
 	}

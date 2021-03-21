@@ -21,14 +21,18 @@ public class Filme {
 	private String genero;
 	private String duracao;
 	private String distribuidora;
-//	private Date lancamento;
+	private Integer lancamento;
 	
-	public Filme(String nome, String diretor, String genero, String duracao, String distribuidora) {
+	public Filme(String nome, String diretor, String genero, String duracao, String distribuidora, Integer lancamento) {
+		super();
 		this.nome = nome;
 		this.diretor = diretor;
 		this.genero = genero;
 		this.duracao = duracao;
 		this.distribuidora = distribuidora;
+		this.lancamento = lancamento;
 	}
+	
+
 	
 }
